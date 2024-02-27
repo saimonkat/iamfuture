@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary-900: 235 68% 7%;
+    --primary-800: 231 37% 15%;
+    --primary-600: 231 27% 25%;
+    --primary-300: 235 25% 73%;
+    --primary-faint: 235 31% 84%;
+    --brand-gradient: linear-gradient(
+      98deg,
+      hsl(193, 100%, 83%) -0.13%,
+      hsl(300, 95%, 93%) 94.05%
+    );
+    --secondary-gradient: linear-gradient(
+      275deg,
+      hsl(178, 100%, 83%) 11.73%,
+      hsl(300, 95%, 93%) 99.45%
+    );
+
+    /* INFO: Shadcn-ui */
+    --background: 235, 68%, 7%;
+    --foreground: 0, 0%, 100%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 231, 27%, 25%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 231, 27%, 25%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 231, 27%, 25%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+    --radius-pill: 300px;
+  }
+
+  .dark {
+    --primary-900: 0 0% 6%;
+    --primary-800: 225 5% 17%;
+    --primary-600: 220 4% 29%;
+    --primary-300: 220 4% 57%;
+    --primary-faint: 0 0% 84%;
+
+    --brand-gradient: linear-gradient(hsl(0, 0%, 100%), hsl(0, 0%, 100%));
+    --secondary-gradient: linear-gradient(hsl(0, 0%, 100%), hsl(0, 0%, 100%));
+
+    /* INFO: Shadcn-ui */
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 216 0% 23%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 216 0% 23%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 216 0% 23%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 216 0% 23%;
+    --input: 216 0% 23%;
+    --ring: 216 0% 23%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-blue-primary-900 text-base-plus text-foreground xl:text-base/6;
+  }
+  img {
+    @apply dark:grayscale;
+  }
+
+  /* INFO: resetting styles after inputs autocomplete */
+  input:-webkit-autofill,
+  textarea:-webkit-autofill,
+  select:-webkit-autofill {
+    -webkit-text-fill-color: white;
+    -webkit-box-shadow: 0 0 0px 1000px hsl(var(--primary-800)) inset;
+    transition: background-color 5000s ease-in-out 0s;
+    caret-color: white;
+  }
+
+  input:-moz-placeholder,
+  textarea:-moz-placeholder,
+  select:-moz-placeholder {
+    -webkit-text-fill-color: white;
+    -webkit-box-shadow: 0 0 0px 1000px hsl(var(--primary-800)) inset;
+    transition: background-color 5000s ease-in-out 0s;
+    caret-color: white;
+  }
+
+  input:-ms-input-placeholder,
+  textarea:-ms-input-placeholder,
+  select:-ms-input-placeholder {
+    -webkit-text-fill-color: white;
+    -webkit-box-shadow: 0 0 0px 1000px hsl(var(--primary-800)) inset;
+    transition: background-color 5000s ease-in-out 0s;
+    caret-color: white;
+  }
+}
+
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth !important;
+}
+
+html {
+  scroll-behavior: smooth !important;
+}
